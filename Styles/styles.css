@@ -1,0 +1,347 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Panel de Control */
+        .control-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+        }
+
+        .control-panel h2 {
+            color: #8B1538;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-bottom: 3px solid #8B1538;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #8B1538;
+            box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1);
+        }
+
+        .file-input-wrapper {
+            position: relative;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-input-button {
+            display: block;
+            width: 100%;
+            padding: 10px 12px;
+            background: linear-gradient(45deg, #8B1538, #a91b47);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 500;
+           /* <-- Agrega esta línea */
+        }
+
+        .file-input-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(139, 21, 56, 0.3);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn-download {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .btn-reset {
+            background: linear-gradient(45deg, #dc3545, #c82333);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Contenedor de la Credencial */
+        .credential-wrapper {
+            display: flex;
+            justify-content: center;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .credential-container {
+            position: relative;
+            width: 400px;
+            height: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .credential-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Campos editables superpuestos */
+        .editable-field {
+            position: absolute;
+            z-index: 2;
+            border: none;
+            background: transparent;
+            font-family: 'Inter', Arial, sans-serif;
+            resize: none;
+            outline: none;
+        }
+
+        .editable-field:focus {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 0 2px rgba(139, 21, 56, 0.5);
+            border-radius: 3px;
+        }
+
+        /* Foto del estudiante */
+           .student-photo {
+            position: absolute;
+            top: 213px;
+            left: 27%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 199px;
+            z-index: 2;
+         
+            background: #fff;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            display: block;
+        }
+
+       .student-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+        /* Campo de nombre */
+        .field-name {
+            top: 465px;
+            left: 50px;
+            width: 300px;
+            height: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Campo de boleta */
+        .field-boleta {
+            top: 380px;
+            left: 50px;
+            width: 200px;
+            height: 90px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #8B1538;
+            text-align: left;
+        }
+
+        /* Campo de programa académico */
+        .field-program {
+            top: 540px;
+            left: 50px;
+            width: 300px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+            text-align: left;
+            text-transform: uppercase;
+            line-height: 1.3;
+            word-wrap: break-word;
+        }
+
+        /* Efectos de texto para simular el diseño original */
+        .field-name,
+        .field-boleta,
+        .field-program {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Loading overlay */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #8B1538;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .control-panel {
+                position: static;
+                order: 2;
+            }
+            
+            .credential-wrapper {
+                order: 1;
+                padding: 20px;
+            }
+            
+            .credential-container {
+                width: 300px;
+                height: 450px;
+            }
+            
+            .student-photo {
+                width: 90px;
+                height: 1500px;
+                top: 150px;
+            }
+            
+            .field-name {
+                top: 285px;
+                left: 37px;
+                width: 225px;
+                font-size: 15px;
+            }
+            
+            .field-boleta {
+                top: 320px;
+                left: 37px;
+                width: 150px;
+                font-size: 12px;
+            }
+            
+            .field-program {
+                top: 355px;
+                left: 37px;
+                width: 225px;
+                font-size: 10px;
+                height: 35px;
+            }
+        }
+
+        /* Placeholder styling */
+        .editable-field::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Custom scrollbar for textarea */
+        .field-program::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .field-program::-webkit-scrollbar-thumb {
+            background: #8B1538;
+            border-radius: 2px;
+        }
