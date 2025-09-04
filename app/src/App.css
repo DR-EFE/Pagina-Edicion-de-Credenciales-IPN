@@ -1,4 +1,4 @@
-  * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -90,7 +90,6 @@
             text-align: center;
             transition: all 0.3s ease;
             font-weight: 500;
-           /* <-- Agrega esta línea */
         }
 
         .file-input-button:hover {
@@ -172,27 +171,27 @@
         }
 
         /* Foto del estudiante */
-           .student-photo {
+        .student-photo {
             position: absolute;
-            top: 213px;
+            top: 180px;
             left: 27%;
             transform: translateX(-50%);
             width: 160px;
             height: 199px;
             z-index: 2;
-         
-            background: #fff;
-            object-fit: cover;
+            background: #e9ecef;
             border: 1px solid #ccc;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
        .student-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         /* Campo de nombre */
         .field-name {
