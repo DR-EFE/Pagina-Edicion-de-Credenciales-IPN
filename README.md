@@ -2,12 +2,12 @@
 
 ## Descripción del Proyecto
 
-Este proyecto es una aplicación web desarrollada en React para la edición y generación de credenciales del IPN (Instituto Politécnico Nacional). Permite a los usuarios cargar imágenes, editar información y descargar las credenciales generadas.
+Este proyecto es una aplicación web desarrollada en React para la edición y generación de credenciales del IPN (Instituto Politécnico Nacional). Permite a los usuarios cargar imágenes, editar información y descargar las credenciales generadas (Por el momento solo de UPIICSA).
 
 ## Características
 
 *   **Edición de Credenciales:** Interfaz intuitiva para modificar datos de las credenciales.
-*   **Carga de Imágenes:** Soporte para cargar imágenes de fondo y fotos de perfil.
+*   **Carga de Imágenes:** Soporte para cargar imágen  de fotos de perfil.
 *   **Generación de Credenciales:** Creación dinámica de credenciales basadas en la información proporcionada.
 *   **Descarga de Credenciales:** Funcionalidad para descargar las credenciales generadas en formato de imagen.
 *   **Migración a React:** Reescritura completa del proyecto de HTML, CSS y JavaScript puro a React para una mejor modularidad y mantenimiento.
