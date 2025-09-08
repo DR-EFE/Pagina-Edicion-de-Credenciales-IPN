@@ -6,7 +6,7 @@ import credentialBackground from './assets/IMAGEN DE FONDO.jpeg';
 function App() {
     const [name, setName] = useState('');
     const [boleta, setBoleta] = useState('');
-    const [program, setProgram] = useState('INGENIERÍA EN SISTEMAS COMPUTACIONALES');
+    const [program, setProgram] = useState('INGENIERÍA EN INFORMATICA');
     const [customProgram, setCustomProgram] = useState('');
     const [photo, setPhoto] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);

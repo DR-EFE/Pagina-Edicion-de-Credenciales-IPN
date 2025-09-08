@@ -300,34 +300,43 @@
                 height: 450px;
             }
             
-            .student-photo {
-                width: 90px;
-                height: 1500px;
-                top: 150px;
-            }
-            
-            .field-name {
-                top: 285px;
-                left: 37px;
-                width: 225px;
-                font-size: 15px;
-            }
-            
-            .field-boleta {
-                top: 320px;
-                left: 37px;
-                width: 150px;
-                font-size: 12px;
-            }
-            
-            .field-program {
-                top: 355px;
-                left: 37px;
-                width: 225px;
-                font-size: 10px;
-                height: 35px;
-            }
-        }
+           @media (max-width: 768px) {
+    .credential-container {
+        width: 300px;
+        height: 450px;
+    }
+
+    .student-photo {
+        width: 117px;
+        height: 122px;  /* valor razonable */
+        top: 161px;     /* ajusta según tu diseño */
+        left: 50%;
+        transform: translateX(-110%); /* centra en móviles */
+    }
+
+    .field-name {
+        top: 240px;
+        left: 20px;
+        width: 260px;
+        font-size: 14px;
+    }
+
+    .field-boleta {
+        top: 270px;
+        left: 20px;
+        width: 200px;
+        font-size: 12px;
+    }
+
+    .field-program {
+        top: 310px;
+        left: 20px;
+        width: 260px;
+        font-size: 11px;
+        height: auto;
+    }
+}
+}
 
         /* Placeholder styling */
         .editable-field::placeholder {
